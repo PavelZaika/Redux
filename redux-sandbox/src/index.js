@@ -1,4 +1,4 @@
-import {createStore}from "redux";
+import { createStore } from "redux";
 
 const reducer = (state = 0, action) => {
   switch (action.type) {
@@ -12,17 +12,14 @@ const reducer = (state = 0, action) => {
 
 const store = createStore(reducer);
 
-store.subscribe(()=>{
-  console.log(store.getState())
-})
+store.subscribe(() => {
+  console.log(store.getState());
+});
 
 // console.log(store.getState());
 store.dispatch({ type: "INC" });
 store.dispatch({ type: "INC" });
 // console.log(store.getState());
-
-
-
 
 // Вручную созданный код
 // let state = reducer(undefined, {})
